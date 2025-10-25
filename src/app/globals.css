@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 175 60% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 175 60% 60%;
+    --primary-dark: 175 60% 40%;
+
+    --secondary: 185 50% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 185 70% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 175 60% 50%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(175 60% 50%),
+      hsl(185 70% 55%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(175 60% 50%) 0%,
+      hsl(185 70% 55%) 100%
+    );
+    --gradient-card: linear-gradient(
+      to bottom,
+      hsl(0 0% 100%),
+      hsl(210 40% 98%)
+    );
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1),
+      0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1),
+      0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1),
+      0 8px 10px -6px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 30px hsl(175 60% 50% / 0.25);
+
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 180 20% 90%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 180 20% 90%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 180 20% 90%;
+
+    --primary: 175 60% 55%;
+    --primary-foreground: 222 47% 11%;
+    --primary-light: 175 60% 65%;
+    --primary-dark: 175 60% 45%;
+
+    --secondary: 185 50% 50%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 222 47% 18%;
+    --muted-foreground: 180 10% 65%;
+
+    --accent: 185 70% 60%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 47% 22%;
+    --input: 222 47% 18%;
+    --ring: 175 60% 55%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(175 60% 55%),
+      hsl(185 70% 60%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(222 47% 11%) 0%,
+      hsl(175 60% 20%) 100%
+    );
+    --gradient-card: linear-gradient(
+      to bottom,
+      hsl(222 47% 14%),
+      hsl(222 47% 12%)
+    );
+
+    --shadow-sm: 0 1px 2px 0 hsl(175 60% 55% / 0.15);
+    --shadow-md: 0 4px 6px -1px hsl(175 60% 55% / 0.25),
+      0 2px 4px -2px hsl(175 60% 55% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(175 60% 55% / 0.3),
+      0 4px 6px -4px hsl(175 60% 55% / 0.25);
+    --shadow-xl: 0 20px 25px -5px hsl(175 60% 55% / 0.35),
+      0 8px 10px -6px hsl(175 60% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(175 60% 55% / 0.4),
+      0 0 20px hsl(185 70% 60% / 0.3);
+
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+}
