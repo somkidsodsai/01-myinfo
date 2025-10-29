@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Journal & Field Notes - Batcat",
+  title: "Insights & Updates — Somkid Sodsai",
   description:
-    "Writing, facilitation kits, and experiments from Batcat on design systems, knowledge operations, and team rituals.",
+    "Notes on infrastructure best practices, automation experiments, and continuous learning from system administrator Somkid Sodsai.",
 };
 
 export default function BlogLayout({

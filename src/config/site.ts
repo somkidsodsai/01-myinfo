@@ -1,9 +1,9 @@
 ﻿import {
   Award,
   Briefcase,
-  Heart,
-  GraduationCap,
+  BookOpen,
   Code2,
+  Heart,
   Palette,
   Smartphone,
   Database,
@@ -11,63 +11,64 @@
   Zap,
   Layers,
   GitBranch,
+  Server,
+  ShieldCheck,
   Mail,
   Phone,
   MapPin,
   Github,
   Linkedin,
   Twitter,
+  Workflow,
   FolderOpen,
   FileText,
   MessageSquare,
 } from "lucide-react";
 
 export const personalInfo = {
-  name: "Batcat",
-  fullName: "Batcat Chayanin",
-  primaryTitle: "Product Design Lead & Creative Coder",
-  location: "Bangkok, Thailand",
-  availability: "Available for product collaborations Q1 2026",
-  email: "hello@batcat.design",
-  phone: "+66 61 234 5678",
+  name: "Somkid",
+  fullName: "Somkid Sodsai",
+  primaryTitle: "System Administrator",
+  location: "Thailand",
+  availability: "Open to new infrastructure and IT challenges",
+  email: "somkid.sodsai@example.com",
+  phone: "+66 80 000 0000",
   resumeUrl: "#",
   socialProfiles: {
-    github: "https://github.com/hello-batcat",
-    linkedin: "https://www.linkedin.com/in/hello-batcat",
-    dribbble: "https://dribbble.com/hello-batcat",
-    email: "mailto:hello@batcat.design",
+    github: "https://github.com/somkidsodsai",
+    linkedin: "https://www.linkedin.com/in/somkidsodsai",
+    dribbble: "https://dribbble.com/somkidsodsai",
+    email: "mailto:somkid.sodsai@example.com",
+    twitter: "https://x.com/somkidsodsai",
   },
 };
 
 export const navigationLinks = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Skills", path: "/skills" },
+  { name: "Project", path: "/portfolio" },
   { name: "Blog", path: "/blog" },
   { name: "Certifications", path: "/certifications" },
-  { name: "Contact", path: "/contact" },
 ];
 
 export const heroContent = {
-  badge: "Designing clarity-first experiences",
-  headline: "Sawasdee, I'm Batcat",
-  highlight: "Batcat",
-  subheadline: "Product design lead crafting knowledge-forward platforms for bold teams in APAC.",
+  badge: "Committed to reliable infrastructure",
+  headline: "Hello, I'm Somkid Sodsai",
+  highlight: "Somkid",
+  subheadline: "System administrator keeping infrastructure stable while learning every day.",
   description:
-    "I blend systems thinking, code, and storytelling to help product squads launch friendly, insight-rich journeys-from enterprise knowledge hubs to customer-facing dashboards.",
-  primaryCta: { label: "View case studies", href: "/portfolio" },
+    "I manage hybrid-cloud and on-prem environments end to end, from provisioning and automation to monitoring, response, and post-incident reviews so your teams can deploy with confidence.",
+  primaryCta: { label: "Explore projects", href: "/portfolio" },
   secondaryCta: { label: "Download CV", href: "#" },
   socials: [
-    { label: "GitHub", href: "https://github.com/hello-batcat", icon: Github },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/hello-batcat", icon: Linkedin },
-    { label: "Email", href: "mailto:hello@batcat.design", icon: Mail },
+    { label: "GitHub", href: personalInfo.socialProfiles.github, icon: Github },
+    { label: "LinkedIn", href: personalInfo.socialProfiles.linkedin, icon: Linkedin },
+    { label: "Email", href: "mailto:somkid.sodsai@example.com", icon: Mail },
   ],
   stats: [
-    { value: "48+", label: "Product rollouts" },
-    { value: "8 yrs", label: "Designing with teams" },
-    { value: "36", label: "Workshops hosted" },
-    { value: "98%", label: "Stakeholder satisfaction" },
+    { value: "99.95%", label: "Uptime maintained" },
+    { value: "12+", label: "Automation playbooks delivered" },
+    { value: "8 years", label: "Infrastructure experience" },
+    { value: "24/7", label: "On-call reliability" },
   ],
 };
 
@@ -82,7 +83,7 @@ export const contactCards = [
     icon: Phone,
     title: "Phone / LINE",
     content: personalInfo.phone,
-    link: "tel:+66612345678",
+    link: `tel:${personalInfo.phone.replace(/\s+/g, "")}`,
   },
   {
     icon: MapPin,
@@ -94,142 +95,143 @@ export const contactCards = [
 export const contactSocials = [
   { icon: Github, url: personalInfo.socialProfiles.github, label: "GitHub" },
   { icon: Linkedin, url: personalInfo.socialProfiles.linkedin, label: "LinkedIn" },
-  { icon: Twitter, url: "https://x.com/batcatdesign", label: "X (Twitter)" },
+  { icon: Twitter, url: personalInfo.socialProfiles.twitter ?? "#", label: "X (Twitter)" },
 ];
 
 export const aboutTimeline = [
   {
-    year: "2022 - Present",
-    title: "Product Design Lead · Flowspace",
-    company: "Flowspace",
+    year: "2021 - Present",
+    title: "Senior System Administrator - Flowspace Logistics",
+    company: "Flowspace Logistics",
     description:
-      "Leading a distributed team crafting knowledge platforms and design operations tooling across Asia-Pacific.",
+      "Lead infrastructure operations across AWS and on-prem hardware, implementing Infrastructure as Code, high-availability clusters, and standardized incident workflows.",
   },
   {
-    year: "2019 - 2022",
-    title: "Design Systems Strategist · Line Leap",
-    company: "Line Leap",
+    year: "2017 - 2021",
+    title: "Systems Engineer - Line Leap Retail",
+    company: "Line Leap Retail",
     description:
-      "Launched cross-platform design tokens, accessibility playbooks, and weekly product critiques.",
+      "Owned Windows and Linux server estates, coordinated network upgrades across 20+ locations, and introduced centralized logging plus SIEM alerting.",
   },
   {
-    year: "2016 - 2019",
-    title: "UX/UI Designer · Brightlab",
-    company: "Brightlab",
+    year: "2014 - 2017",
+    title: "IT Support Specialist - Brightlab Manufacturing",
+    company: "Brightlab Manufacturing",
     description:
-      "Shipped progressive web apps, facilitated bilingual user research, and introduced rapid insight synthesis rituals.",
+      "Supported production floor systems, deployed imaging pipelines, and reduced ticket response time by automating routine maintenance.",
   },
 ];
 
 export const aboutEducation = [
   {
-    degree: "M.A. Service Design & Innovation",
-    school: "Chulalongkorn University",
-    year: "2014 - 2016",
+    degree: "M.Sc. Information Technology Management",
+    school: "King Mongkut's University of Technology Thonburi",
+    year: "2016 - 2018",
     description:
-      "Focused on knowledge systems, participatory research, and design facilitation for large organisations.",
+      "Researched hybrid-cloud governance, disaster recovery planning, and enterprise network architecture.",
   },
   {
-    degree: "B.A. Communication Design",
-    school: "King Mongkut's Institute of Technology",
+    degree: "B.Eng. Computer Engineering",
+    school: "Chiang Mai University",
     year: "2010 - 2014",
-    description: "Explored interaction design, type systems, and storytelling for digital products.",
+    description: "Specialized in systems administration, virtualization, and secure network design.",
   },
 ];
 
 export const aboutValues = [
   {
-    icon: Heart,
-    title: "Empathy Before Interfaces",
+    icon: ShieldCheck,
+    title: "Reliability First",
     description:
-      "Every prototype starts with stories-listening deeply to the rituals that already work for people.",
+      "Plan maintenance windows, test failovers, and harden baselines so teams can trust the infrastructure day or night.",
   },
   {
-    icon: Award,
-    title: "Outcomes Over Output",
+    icon: Server,
+    title: "Automate with Care",
     description:
-      "Design is successful when teams launch with confidence and customers feel seen, not when the UI looks shiny.",
+      "Use scripting, configuration management, and monitoring to remove toil without losing sight of edge cases.",
   },
   {
-    icon: Briefcase,
-    title: "Co-create with Teams",
+    icon: Workflow,
+    title: "Collaborate Across Functions",
     description:
-      "I bring product, data, and service design together, ensuring everyone owns the roadmap and results.",
+      "Partner with developers, security, and support so changes roll out smoothly and everyone has the same playbook.",
   },
   {
-    icon: GraduationCap,
-    title: "Teach What You Ship",
+    icon: BookOpen,
+    title: "Share What I Learn",
     description:
-      "I document patterns, run clinics, and coach so design grows as a shared capability-not a silo.",
+      "Document fixes, run quick knowledge sessions, and mentor teammates to keep the entire org moving forward together.",
   },
 ];
 
 export const skillGroups = {
   technical: [
-    { name: "React / Next.js", level: 92, icon: Code2 },
-    { name: "TypeScript / JavaScript", level: 90, icon: Code2 },
-    { name: "Information Architecture", level: 94, icon: Layout },
-    { name: "Design Tokens", level: 88, icon: Layers },
-    { name: "Node.js API design", level: 80, icon: Database },
-    { name: "Data Visualization", level: 86, icon: Code2 },
-    { name: "Research Synthesis", level: 92, icon: Zap },
-    { name: "Experimentation Ops", level: 89, icon: GitBranch },
+    { name: "Linux / Windows Server", level: 94, icon: Code2 },
+    { name: "Cloud Infrastructure (AWS/Azure)", level: 90, icon: Layout },
+    { name: "Networking & Firewalls", level: 92, icon: Zap },
+    { name: "Automation (Ansible, PowerShell)", level: 91, icon: GitBranch },
+    { name: "Container Platforms (Docker/K8s)", level: 88, icon: Layers },
+    { name: "Virtualization (VMware/Hyper-V)", level: 86, icon: Database },
+    { name: "Monitoring & Observability", level: 90, icon: Smartphone },
+    { name: "Backup & DR Strategy", level: 92, icon: ShieldCheck },
   ],
   design: [
-    { name: "Figma", level: 96, icon: Palette },
-    { name: "Design Systems", level: 94, icon: Layers },
-    { name: "Content Design", level: 88, icon: Palette },
-    { name: "Workshop Facilitation", level: 92, icon: Layout },
-    { name: "Service Blueprinting", level: 90, icon: Zap },
-    { name: "Prototype Testing", level: 93, icon: Smartphone },
-    { name: "Accessibility Audits", level: 87, icon: Palette },
-    { name: "Data Storytelling", level: 89, icon: Zap },
+    { name: "ITIL Change Management", level: 90, icon: Workflow },
+    { name: "Incident Response & RCA", level: 92, icon: ShieldCheck },
+    { name: "Capacity Planning", level: 88, icon: Layout },
+    { name: "Stakeholder Communication", level: 91, icon: Palette },
+    { name: "Documentation & Runbooks", level: 95, icon: FileText },
+    { name: "Team Coaching", level: 87, icon: Heart },
+    { name: "Vendor Coordination", level: 85, icon: Briefcase },
+    { name: "Budget Forecasting", level: 83, icon: Award },
   ],
   tools: [
-    { name: "Git / GitHub", level: 90, icon: GitBranch },
-    { name: "Jira / Linear", level: 85, icon: Layers },
-    { name: "Notion / Coda", level: 95, icon: Layout },
-    { name: "Miro / FigJam", level: 93, icon: Palette },
-    { name: "Playwright / Testing Library", level: 78, icon: Code2 },
-    { name: "Sentry / Analytics", level: 82, icon: Database },
+    { name: "Terraform & CloudFormation", level: 88, icon: Layers },
+    { name: "Ansible & PowerShell DSC", level: 90, icon: GitBranch },
+    { name: "Grafana / Prometheus / Zabbix", level: 92, icon: Smartphone },
+    { name: "Azure DevOps / GitHub Actions", level: 86, icon: Code2 },
+    { name: "ServiceNow / Jira", level: 84, icon: Workflow },
+    { name: "CrowdStrike / SentinelOne", level: 80, icon: ShieldCheck },
   ],
   soft: [
-    { name: "Story-driven communication", level: 96 },
-    { name: "Cross-cultural collaboration", level: 94 },
-    { name: "Mentoring & coaching", level: 92 },
-    { name: "Strategic facilitation", level: 90 },
+    { name: "Clear incident communication", level: 95 },
+    { name: "Cross-team collaboration", level: 93 },
+    { name: "Mentoring & coaching", level: 90 },
+    { name: "Strategic planning", level: 89 },
     { name: "Systems thinking", level: 95 },
-    { name: "Change management", level: 88 },
+    { name: "Change management", level: 92 },
   ],
 } as const;
 
+
 export const learningFocus = [
-  "AI-assisted prototyping",
-  "Advanced localisation",
-  "Systems coaching",
-  "Edge rendering patterns",
+  "SRE best practices",
+  "Zero-trust architectures",
+  "Cloud cost optimization",
+  "Kubernetes platform engineering",
 ];
 
 export const technologyLogos = [
-  { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-  { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
-  { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
-  { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "D3.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" },
-  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
-  { name: "Framer", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framer/framer-original.svg" },
+  { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+  { name: "Azure", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+  { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+  { name: "Windows Server", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" },
+  { name: "Terraform", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+  { name: "Ansible", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" },
   { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+  { name: "Grafana", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" },
+  { name: "Prometheus", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" },
+  { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "VMware", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vmware/vmware-original.svg" },
 ];
 
 export const adminSkillDefaults = [
-  { id: 1, name: "Design Systems Strategy", category: "Design", level: 95 },
-  { id: 2, name: "React / Next.js", category: "Engineering", level: 90 },
-  { id: 3, name: "Workshop Facilitation", category: "Leadership", level: 93 },
-  { id: 4, name: "Research Ops", category: "Research", level: 88 },
+  { id: 1, name: "Infrastructure Automation", category: "Operations", level: 95 },
+  { id: 2, name: "Hybrid Cloud Administration", category: "Engineering", level: 90 },
+  { id: 3, name: "Incident Coordination", category: "Leadership", level: 93 },
+  { id: 4, name: "Security Hardening", category: "Security", level: 88 },
 ] as const;
 
 export const adminSettingsDefaults = {
@@ -238,7 +240,7 @@ export const adminSettingsDefaults = {
   autoReply: {
     enabled: true,
     message:
-      "Khob khun for reaching out to Batcat! I typically reply within one business day. For urgent workshops, WhatsApp me at +66 61 234 567 8.",
+      "Khob khun for reaching out to Somkid! I typically reply within one business day. For urgent issues, call or message me at +66 61 234 567 8.",
   },
   integrations: {
     notion: true,

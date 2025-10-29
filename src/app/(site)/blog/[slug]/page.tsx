@@ -23,12 +23,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   try {
     const post = await fetchBlogPostBySlug(resolvedParams.slug);
     return {
-      title: `${post.title} - Batcat`,
+      title: `${post.title} - Somkid Sodsai`,
       description: post.excerpt ?? undefined,
     };
   } catch {
     return {
-      title: "Article not found - Batcat",
+      title: "Article not found - Somkid Sodsai",
     };
   }
 }
@@ -218,10 +218,10 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                       <User className="text-white" size={30} />
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-1">About {author.name ?? "Batcat"}</h4>
-                      <p className="text-muted-foreground mb-3">{author.role ?? "Product design lead"}</p>
+                      <h4 className="text-xl font-bold mb-1">About {author.name ?? "Somkid Sodsai"}</h4>
+                      <p className="text-muted-foreground mb-3">{author.role ?? "System administrator"}</p>
                       <p className="text-sm text-muted-foreground">
-                        I help teams craft clarity-first experiences and rituals. If this article sparked something, let&apos;s talk about building it together.
+                        I share the practical lessons from keeping infrastructure resilient and secure. If this article sparks an idea, let&apos;s connect about how to keep your environment running smoothly.
                       </p>
                     </div>
                   </div>

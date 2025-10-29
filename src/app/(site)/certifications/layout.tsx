@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Certifications & Credentials - Batcat",
+  title: "Certifications & Credentials — Somkid Sodsai",
   description:
-    "Professional certifications validating Batcat's expertise across design systems, operations, accessibility, and data storytelling.",
+    "Professional certifications that demonstrate Somkid Sodsai’s commitment to secure, well-managed IT infrastructure and lifelong learning.",
 };
 
 export default function CertificationsLayout({

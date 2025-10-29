@@ -9,12 +9,6 @@ import { heroContent } from "@/config/site";
 const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/20 to-background/75 backdrop-blur-sm" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_-10%,rgba(159,239,0,0.18),transparent_55%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_82%_6%,rgba(56,189,248,0.2),transparent_60%)]" />
-      </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
@@ -81,7 +75,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-primary rounded-full opacity-20 blur-2xl animate-float" />
               <Image
                 src="/profile-avatar.png"
-                alt="Batcat portrait"
+                alt="Somkid Sodsai portrait"
                 width={384}
                 height={384}
                 priority

@@ -13,7 +13,9 @@ export default function SiteLayout({
     <div className="relative min-h-screen bg-background text-foreground">
       <GlobalTechBackground />
       <Navigation />
-      <main className="relative z-10 pt-20">{children}</main>
+      <main id="main-content" className="relative z-10 pt-20">
+        {children}
+      </main>
       <Footer />
     </div>
   );

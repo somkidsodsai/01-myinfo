@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Batcat",
+  title: "Projects & Infrastructure Work — Somkid Sodsai",
   description:
-    "Case studies and experiments from Batcat - showcasing knowledge systems, design operations, and storytelling for product teams.",
+    "Projects, automations, and infrastructure improvements led by Somkid Sodsai to keep systems reliable and scalable.",
 };
 
 export default function PortfolioLayout({
