@@ -8,17 +8,12 @@ import { heroContent } from "@/config/site";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-bg.jpg"
-          alt="Abstract teal gradients"
-          fill
-          priority
-          className="object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/85 to-background" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/20 to-background/75 backdrop-blur-sm" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_-10%,rgba(159,239,0,0.18),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_82%_6%,rgba(56,189,248,0.2),transparent_60%)]" />
       </div>
 
       {/* Content */}
@@ -26,7 +21,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
           <div className="flex-1 text-center lg:text-left space-y-6 animate-fade-in-up">
             <div className="inline-block">
-              <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+              <span className="px-4 py-2 rounded-full border border-primary/40 bg-primary/15 text-primary text-sm font-semibold shadow-sm backdrop-blur">
                 {heroContent.badge}
               </span>
             </div>
@@ -48,13 +43,13 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 shadow-glow text-base">
+              <Button asChild size="lg" className="px-8 text-base font-semibold shadow-glow transition-all hover:shadow-xl">
                 <Link href={heroContent.primaryCta.href}>
                   {heroContent.primaryCta.label}
                   <ArrowRight className="ml-2" size={20} />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base">
+              <Button asChild size="lg" variant="outline" className="text-base font-semibold">
                 <a href={heroContent.secondaryCta.href}>
                   <Download className="mr-2" size={20} />
                   {heroContent.secondaryCta.label}
@@ -71,7 +66,7 @@ const Hero = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-muted hover:bg-primary hover:text-white transition-all flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1"
+                    className="w-12 h-12 rounded-full border border-border/80 bg-card/80 backdrop-blur flex items-center justify-center text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/20 hover:text-primary-foreground shadow-md hover:shadow-glow"
                     aria-label={social.label}
                   >
                     <Icon size={20} />
@@ -100,7 +95,7 @@ const Hero = () => {
           {heroContent.stats.map((stat) => (
             <div
               key={stat.label}
-              className="p-6 rounded-xl bg-gradient-card border border-border shadow-md hover:shadow-lg transition-shadow text-center"
+              className="p-6 rounded-2xl border border-border/80 bg-card/80 backdrop-blur-lg shadow-lg hover:border-primary/60 hover:shadow-glow transition-all duration-300 text-center"
             >
               <div className="text-3xl md:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 {stat.value}

@@ -2,6 +2,7 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GlobalTechBackground from "@/components/GlobalTechBackground";
 
 export default function SiteLayout({
   children,
@@ -9,9 +10,10 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <GlobalTechBackground />
       <Navigation />
-      <main className="pt-20">{children}</main>
+      <main className="relative z-10 pt-20">{children}</main>
       <Footer />
     </div>
   );
